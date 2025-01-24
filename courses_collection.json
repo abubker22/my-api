@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "6da0a73e-f558-7fbe-2a42",
+		"name": "Courses API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Courses by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses/category/Programming",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"category",
+						"Programming"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"دورة جديدة في البرمجة\",\n    \"category\": \"Programming\",\n    \"price\": 50,\n    \"description\": \"دورة متقدمة في البرمجة\",\n    \"image\": \"https://example.com/image.jpg\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"دورة محدثة في البرمجة\",\n    \"price\": 60\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
